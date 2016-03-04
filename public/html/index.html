@@ -1,4 +1,4 @@
-<html>
+<html ng-app='dogCheckList'>
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +10,20 @@
   </head>
 <body>
 <span>Dogs Weekly bath and Monthly flea/heartworm preventitive checklist.</span>
-  <div class="container" ng-controller='ChecklistController'>
+  <!-- <div class="container" ng-controller='ChecklistController'>
     <h1>Weekly Baths</h1>
 
     <div class="row">
-      <form class="pure-form">
+
         <a class="pure-button pure-button-active" href="#">Done</a>
     <button class="pure-button pure-button-active">Postpone</button>
         <label ng-repeat="role in roles">
               T.J. Bath
     </label>
   </div>
-</form>
+
     <div class="row">
-      <form class="pure-form">
+
     <a class="pure-button pure-button-active" href="#">Done</a>
 <button class="pure-button pure-button-active">Postpone</button>
 <label ng-repeat="role in roles">
@@ -39,56 +39,31 @@
       Gypsy Bath
 </label>
 </div>
-</form>
+
 <a class="pure-button pure-button-active" href="#">Done</a>
 <button class="pure-button pure-button-active">Postpone</button>
 <label ng-repeat="role in roles">
       Lucy Bath
-</div>
-</form>
-<div class="row">
-  <form class="pure-form">
-    <h1>Monthly flea/heartworm preventitive</h1>
-    <div class="row">
-      <form class="pure-form">
-    <label for="option-one" class="pure-checkbox">
-        <input id="option-one" type="checkbox" value="">
-        T.J. flea/Heartworm Preventitive
-    </label>
-    <a class="pure-button pure-button-active" href="#">Done</a>
-    <label for="option-one" class="pure-checkbox">
-        <input id="option-one" type="checkbox" value="">
-        Lola flea/Heartworm Preventitive
-    </label>
-    <a class="pure-button pure-button-active" href="#">Done</a>
-      <label for="option-one" class="pure-checkbox">
-        <input id="option-one" type="checkbox" value="">
-        Gypsy flea/Heartworm Preventitive
-    </label>
-    <a class="pure-button pure-button-active" href="#">Done</a>
-      <label for="option-one" class="pure-checkbox">
-        <input id="option-one" type="checkbox" value="">
-        Lucy flea/Heartworm Preventitive
-    </label>
-    <a class="pure-button pure-button-active" href="#">Done</a>
-      <label for="option-one" class="pure-checkbox">
-        <input id="option-one" type="checkbox" value="">
-        Sophie flea/Heartworm Preventitive
-    </label>
-    <a class="pure-button pure-button-active" href="#">Done</a>
+</div> -->
 
 
-
-
-
-
-
-
-
-</form>
-
-
+<div class='container' ng-controller='ChecklistController'>
+  <br>
+  <div class="row">
+    <input type="text" ng-model="dog.name">
+    <button type="button" ng-click="addDogToMedsList()">Give Meds</button>
+  </div>
+  <hr>
+  <h1>Monthly flea/heartworm preventative</h1>
+    <div class='row' ng-repeat="dog in dogs">
+      <label>
+        <input type="checkbox" ng-checked='{{dog.gotMeds}}'
+        ng-click='dog.gotMeds = !dog.gotMeds' class='pure-checkbox'>
+        {{dog.name}} Flea/Heartworm Preventative
+      </label>
+    </div>
 </div>
 
+  <script src="js/app.js"></script>
 </body>
 </html>
