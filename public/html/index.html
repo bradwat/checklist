@@ -12,18 +12,80 @@
 <span>Dogs Weekly bath and Monthly flea/heartworm preventitive checklist.</span>
   <div class="container" ng-controller='ChecklistController'>
     <h1>Weekly Baths</h1>
-    <div class="row">
-        <div class="col-md-6 col-md-12">
-          <ul>
-        <li class='well no-dot' ng-repeat= 'singleTodo in todoList'>
-        <h3>T.J. bath</h3>
-        <span class="glyphicon glyphicon-arrow-up pull-right" ng-if='$index !== 0' ng-click='moveUp(singleTodo)'>
-        </span>
-        <button class="button.btn-info btn-sm pull-right" ng-click='editTodo(singleTodo)'>Edit</button>
-          <button class= "btn-danger btn-sm pull-right" ng-click='removeTodo(singleTodo)'>X</button>
-        </li>
-      </ul>
 
+    <div class="row">
+      <form class="pure-form">
+        <a class="pure-button pure-button-active" href="#">Done</a>
+    <button class="pure-button pure-button-active">Postpone</button>
+        <label ng-repeat="role in roles">
+              T.J. Bath
+    </label>
+  </div>
+</form>
+    <div class="row">
+      <form class="pure-form">
+    <a class="pure-button pure-button-active" href="#">Done</a>
+<button class="pure-button pure-button-active">Postpone</button>
+<label ng-repeat="role in roles">
+    Lola Bath
+</label>
+</div>
+</form>
+<div class="row">
+  <form class="pure-form">
+<a class="pure-button pure-button-active" href="#">Done</a>
+<button class="pure-button pure-button-active">Postpone</button>
+<label ng-repeat="role in roles">
+      Gypsy Bath
+</label>
+</div>
+</form>
+<a class="pure-button pure-button-active" href="#">Done</a>
+<button class="pure-button pure-button-active">Postpone</button>
+<label ng-repeat="role in roles">
+      Lucy Bath
+</div>
+</form>
+<div class="row">
+  <form class="pure-form">
+    <h1>Monthly flea/heartworm preventitive</h1>
+    <div class="row">
+      <form class="pure-form">
+    <label for="option-one" class="pure-checkbox">
+        <input id="option-one" type="checkbox" value="">
+        T.J. flea/Heartworm Preventitive
+    </label>
+    <a class="pure-button pure-button-active" href="#">Done</a>
+    <label for="option-one" class="pure-checkbox">
+        <input id="option-one" type="checkbox" value="">
+        Lola flea/Heartworm Preventitive
+    </label>
+    <a class="pure-button pure-button-active" href="#">Done</a>
+      <label for="option-one" class="pure-checkbox">
+        <input id="option-one" type="checkbox" value="">
+        Gypsy flea/Heartworm Preventitive
+    </label>
+    <a class="pure-button pure-button-active" href="#">Done</a>
+      <label for="option-one" class="pure-checkbox">
+        <input id="option-one" type="checkbox" value="">
+        Lucy flea/Heartworm Preventitive
+    </label>
+    <a class="pure-button pure-button-active" href="#">Done</a>
+      <label for="option-one" class="pure-checkbox">
+        <input id="option-one" type="checkbox" value="">
+        Sophie flea/Heartworm Preventitive
+    </label>
+    <a class="pure-button pure-button-active" href="#">Done</a>
+
+
+
+
+
+
+
+
+
+</form>
 
 
 </div>
