@@ -1,16 +1,32 @@
-var position = $scope.todoList.indexOf(singleTodo);
-$scope.todoList.splice(position,1);
+var app = angular.module('ngChecklist',
+[]);
+app.controller('ChecklistController',
+function($scope){
+  $scope.checkList = ['rake the yard',
+                      'take a nap',
+                      'take another nap',
+                      'walk the dog',
+                      'eat that leftover meatloaf']
+$scope.savehecklist = function() {
+    var ChecklistInfo = $scope.currentTodo;
+    $scope.checkList.push(todoInfo);
+    $scope.currentChecklist = "";
 }
 
-$scope.editTodo = function(singleTodo){
-$scope.currentTodo = singleTodo;
-$scope.removeTodo(singleTodo);
+$scope.removeChecklist = function(singleTodo){
+  var position = $scope.checkList.indexOf(singleTodo);
+  $scope.checkList.splice(position,1);
 }
 
-$scope.moveUp = function(singleTodo){
-var index = $scope.todoList.indexOf(singleTodo);
-$scope.todoList.splice(index,1);
-$scope.todoList.splice(index-1, 0, singleTodo);
+$scope.editChecklist = function(singleChecklist){
+  $scope.currentChecklist = singleChecklist;
+  $scope.removeChecklist(singleChecklist);
+}
+
+$scope.moveUp = function(singleChecklist){
+  var index = $scope.todoList.indexOf(singleChecklist);
+  $scope.todoList.splice(index,1);
+  $scope.todoList.splice(index-1, 0, singleChecklist);
 
 }
 });
