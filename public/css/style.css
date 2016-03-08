@@ -1,0 +1,28 @@
+
+span{
+font-size: 50px;
+font-family: fantasy;
+color: 	#006400;
+}
+body{
+  background-color: #DEB887;
+}
+button{
+  background-color:green;
+  border-color: #556B2F;
+  font-weight: bolder;
+}
+h1{
+  color:#8B0000;
+  text-decoration: underline;
+  font-family: monospace;
+}
+label{
+color: #006400;
+font-size: 30px;
+}
+input{
+  background-color:;
+  font-weight: ;
+  border-color:  #006400;
+}

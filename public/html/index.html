@@ -1,69 +1,33 @@
 <html ng-app='dogCheckList'>
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="first" type="text/css" href="main.css">
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
-  <meta charset="UTF-8">
-  <title>Dogs Monthly flea/heartworm preventitive checklist</title>
+<body background='image/pawprints.jpg'>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+    <link rel="stylesheet"  href="css/style.css">
   </head>
-<body>
-<span>Dogs Weekly bath and Monthly flea/heartworm preventitive checklist.</span>
-  <!-- <div class="container" ng-controller='ChecklistController'>
-    <h1>Weekly Baths</h1>
+  <body>
+    <span> The dog's, and cat's monthly flea/heartworm preventitive checklist.</span>
+    <div class='container' ng-controller='ChecklistController'>
+      <br>
+      <div class="row">
+        <input type="text" ng-model="dog.name">
+        <button type="button" ng-click="addDogToMedsList()">Give Meds</button>
+      </div>
+      <img src="image/gypsy.jpg" height="500px" width="900px">
+      <h1>Monthly flea/heartworm preventative.</h1>
+      <div class='row' ng-repeat="dog in dogs">
+        <label>
+          <input type="checkbox" ng-checked='{{dog.gotMeds}}'
+          ng-click='dog.gotMeds = !dog.gotMeds' class='pure-checkbox'>
+          <button class= "btn-danger btn-sm pull-right" ng-click='removeTodo(singleTodo)'>X</button>
+          {{dog.name}} Flea/Heartworm Preventative
+          </label>
 
-    <div class="row">
-
-        <a class="pure-button pure-button-active" href="#">Done</a>
-    <button class="pure-button pure-button-active">Postpone</button>
-        <label ng-repeat="role in roles">
-              T.J. Bath
-    </label>
-  </div>
-
-    <div class="row">
-
-    <a class="pure-button pure-button-active" href="#">Done</a>
-<button class="pure-button pure-button-active">Postpone</button>
-<label ng-repeat="role in roles">
-    Lola Bath
-</label>
-</div>
-</form>
-<div class="row">
-  <form class="pure-form">
-<a class="pure-button pure-button-active" href="#">Done</a>
-<button class="pure-button pure-button-active">Postpone</button>
-<label ng-repeat="role in roles">
-      Gypsy Bath
-</label>
-</div>
-
-<a class="pure-button pure-button-active" href="#">Done</a>
-<button class="pure-button pure-button-active">Postpone</button>
-<label ng-repeat="role in roles">
-      Lucy Bath
-</div> -->
-
-
-<div class='container' ng-controller='ChecklistController'>
-  <br>
-  <div class="row">
-    <input type="text" ng-model="dog.name">
-    <button type="button" ng-click="addDogToMedsList()">Give Meds</button>
-  </div>
-  <hr>
-  <h1>Monthly flea/heartworm preventative</h1>
-    <div class='row' ng-repeat="dog in dogs">
-      <label>
-        <input type="checkbox" ng-checked='{{dog.gotMeds}}'
-        ng-click='dog.gotMeds = !dog.gotMeds' class='pure-checkbox'>
-        {{dog.name}} Flea/Heartworm Preventative
-      </label>
+      </div>
     </div>
-</div>
 
-  <script src="js/app.js"></script>
-</body>
-</html>
+    <script src="js/app.js"></script>
+  </body>
+  </html>
