@@ -31,8 +31,8 @@ var app = angular.module('dogCheckList', []);
      $scope.dog = {};
    }
    $scope.removeChecklist = function(singleChecklist){
-     var position = $scope.checklist.indexOf(singleChecklist);
-     $scope.checklist.splice(position,1);
+     var position = $scope.dogs.indexOf(singleChecklist);
+     $scope.dogs.splice(position,1);
    }
 
    $scope.editChecklist = function(singleChecklist){
